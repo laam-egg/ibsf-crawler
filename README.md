@@ -55,7 +55,7 @@ python ibsf.py
 ## Implementation Details
 
 I did not implement asynchronous webpage
-fetching because that might results in
+fetching because that might result in
 a 503 Forbidden or 429 Rate Limited
 response.
 
