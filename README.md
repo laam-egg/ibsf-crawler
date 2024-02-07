@@ -8,12 +8,17 @@
 
 ## What is this?
 
-This Python script parses the following web page:
+These Python scripts parse the following web page:
 
 <https://www.ibsf.org/en/athletes?tx_fmathletes_list%5Bgender%5D=&tx_fmathletes_list%5Bnation%5D=&tx_fmathletes_list%5Bpage%5D=4&tx_fmathletes_list%5Bseason%5D=1000004&tx_fmathletes_list%5Bsport%5D=&tx_fmathletes_list%5Bsword%5D=&cHash=cb25b00d994506582e714c8769e07c57>
 
 to enumerate all the athletes, as well as their
 countries and continents.
+
+- `ibsf.py`: Parse ALL athletes.
+- `ibsf-bob.py`: Parse BOBSLEIGH athletes.
+- `ibsf-skeleton.py`: Parse SKELETON athletes.
+- `ibsf-para.py`: Parse PARASPORT athletes.
 
 All the parsed data goes to an Excel file whose
 file name is to be specified by the user.
@@ -52,6 +57,9 @@ Still inside the project's directory:
 python ibsf.py
 ```
 
+The same goes to similar scripts
+(`python ibsf-bob.py` and so on).
+
 ## Implementation Details
 
 I did not implement asynchronous webpage
@@ -63,3 +71,4 @@ As a result, the script could take up to
 5 minutes to parse all roughly 34 pages
 with over 1000 athlete entries (Most of
 that time is networking time).
+
